@@ -14,9 +14,9 @@ public class Conexion {
     
     static Connection conn;
 
-    public static final String URL = "jdbc:mysql://145.14.151.1/u812167471_loginencrip";
-    public static final String USARNAME = "u812167471_loginencrip";
-    public static final String PASSWORD = "2024-LoginEncript";
+    public static final String URL = "";
+    public static final String USARNAME = "";
+    public static final String PASSWORD = "";
 
     public static Connection conectar() {
 
