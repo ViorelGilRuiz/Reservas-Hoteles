@@ -54,10 +54,6 @@ public class Utilidades {
 
     }
     
-    public static void limpiarcampos () {
-    
-        for ()
-    
-    }
-    
+    public static void limpiarcampos () {    
+
 }

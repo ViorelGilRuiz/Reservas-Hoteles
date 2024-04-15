@@ -4,9 +4,9 @@
  */
 package Vistas;
 
-public class ReservaHabitaciones extends java.awt.Dialog {
+public class ReservaSalones extends java.awt.Dialog {
 
-    public ReservaHabitaciones(java.awt.Frame parent, boolean modal) {
+    public ReservaSalones(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -60,7 +60,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         jTextField2.setBackground(new java.awt.Color(0, 0, 0));
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("Registro de Habitaciones");
+        jTextField2.setText("Registro de Salones");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -292,7 +292,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ReservaHabitaciones dialog = new ReservaHabitaciones(new java.awt.Frame(), true);
+                ReservaSalones dialog = new ReservaSalones(new java.awt.Frame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         System.exit(0);
