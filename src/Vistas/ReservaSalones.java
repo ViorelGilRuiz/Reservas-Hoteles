@@ -40,10 +40,9 @@ public class ReservaSalones extends java.awt.Dialog {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        campoHabitacionSencilla = new javax.swing.JRadioButton();
-        campoHabitacionDoble = new javax.swing.JRadioButton();
-        fechaSalida = new com.toedter.calendar.JDateChooser();
         fechaEntrada = new com.toedter.calendar.JDateChooser();
+        Catering = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
         detalleFactura = new javax.swing.JPanel();
         botonGenerarFactura = new javax.swing.JButton();
         botonNuevaReserva = new javax.swing.JButton();
@@ -99,6 +98,7 @@ public class ReservaSalones extends java.awt.Dialog {
         jLabel8.setText("Localidad");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
+        campoLocalidad.setName("Localidad"); // NOI18N
         campoLocalidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoLocalidadActionPerformed(evt);
@@ -111,6 +111,7 @@ public class ReservaSalones extends java.awt.Dialog {
         comprobarDNI.setText("Comprobar DNI");
         jPanel2.add(comprobarDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 120, -1));
 
+        campoDNI.setName("DNI"); // NOI18N
         campoDNI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDNIActionPerformed(evt);
@@ -118,6 +119,7 @@ public class ReservaSalones extends java.awt.Dialog {
         });
         jPanel2.add(campoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 120, 20));
 
+        campoNombre.setName("Nombre"); // NOI18N
         campoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoNombreActionPerformed(evt);
@@ -125,6 +127,7 @@ public class ReservaSalones extends java.awt.Dialog {
         });
         jPanel2.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 100, 20));
 
+        campoApellidos.setName("Apellidos"); // NOI18N
         campoApellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoApellidosActionPerformed(evt);
@@ -132,6 +135,7 @@ public class ReservaSalones extends java.awt.Dialog {
         });
         jPanel2.add(campoApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 100, 20));
 
+        campoTelefono.setName("Telefono"); // NOI18N
         campoTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTelefonoActionPerformed(evt);
@@ -139,6 +143,7 @@ public class ReservaSalones extends java.awt.Dialog {
         });
         jPanel2.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 100, 20));
 
+        campoEmail.setName("Email"); // NOI18N
         campoEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoEmailActionPerformed(evt);
@@ -146,6 +151,7 @@ public class ReservaSalones extends java.awt.Dialog {
         });
         jPanel2.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 100, 20));
 
+        campoDireccion.setName("Direccion"); // NOI18N
         campoDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDireccionActionPerformed(evt);
@@ -153,6 +159,7 @@ public class ReservaSalones extends java.awt.Dialog {
         });
         jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 100, 20));
 
+        codigoPostal.setName("Codigo Postal"); // NOI18N
         codigoPostal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoPostalActionPerformed(evt);
@@ -163,23 +170,23 @@ public class ReservaSalones extends java.awt.Dialog {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de la reserva"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setText("Fecha de Entada");
+        jLabel9.setText("Fecha");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 100, -1));
 
-        jLabel10.setText("Fecha de Salida");
+        jLabel10.setText("Nº De Personas");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 90, -1));
 
-        jLabel11.setText("Tipo de habitaciones");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 130, -1));
+        jLabel11.setText("Catering");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 130, -1));
 
-        campoHabitacionSencilla.setSelected(true);
-        campoHabitacionSencilla.setText("Sencilla");
-        jPanel3.add(campoHabitacionSencilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 70, -1));
-
-        campoHabitacionDoble.setText("doble");
-        jPanel3.add(campoHabitacionDoble, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
-        jPanel3.add(fechaSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 140, 20));
+        fechaEntrada.setName("Fecha"); // NOI18N
         jPanel3.add(fechaEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 140, 20));
+
+        Catering.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+        jPanel3.add(Catering, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
+
+        jTextField1.setName("Numero de Personas"); // NOI18N
+        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 90, -1));
 
         detalleFactura.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalle de la ultima reserva registrada"));
 
@@ -305,14 +312,13 @@ public class ReservaSalones extends java.awt.Dialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> Catering;
     private javax.swing.JButton botonGenerarFactura;
     private javax.swing.JButton botonNuevaReserva;
     private javax.swing.JTextField campoApellidos;
     private javax.swing.JTextField campoDNI;
     private javax.swing.JTextField campoDireccion;
     private javax.swing.JTextField campoEmail;
-    private javax.swing.JRadioButton campoHabitacionDoble;
-    private javax.swing.JRadioButton campoHabitacionSencilla;
     private javax.swing.JTextField campoLocalidad;
     private javax.swing.JTextField campoNombre;
     private javax.swing.JTextField campoTelefono;
@@ -320,7 +326,6 @@ public class ReservaSalones extends java.awt.Dialog {
     private javax.swing.JButton comprobarDNI;
     private javax.swing.JPanel detalleFactura;
     private com.toedter.calendar.JDateChooser fechaEntrada;
-    private com.toedter.calendar.JDateChooser fechaSalida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -336,6 +341,7 @@ public class ReservaSalones extends java.awt.Dialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

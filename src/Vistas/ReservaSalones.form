@@ -223,6 +223,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="campoLocalidad">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Localidad" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoLocalidadActionPerformed"/>
           </Events>
@@ -249,6 +252,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="campoDNI">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="DNI" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDNIActionPerformed"/>
           </Events>
@@ -259,6 +265,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="campoNombre">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Nombre" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoNombreActionPerformed"/>
           </Events>
@@ -269,6 +278,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="campoApellidos">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Apellidos" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoApellidosActionPerformed"/>
           </Events>
@@ -279,6 +291,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="campoTelefono">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Telefono" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoTelefonoActionPerformed"/>
           </Events>
@@ -289,6 +304,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="campoEmail">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Email" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoEmailActionPerformed"/>
           </Events>
@@ -299,6 +317,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="campoDireccion">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Direccion" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDireccionActionPerformed"/>
           </Events>
@@ -309,6 +330,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="codigoPostal">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Codigo Postal" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="codigoPostalActionPerformed"/>
           </Events>
@@ -335,7 +359,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de Entada"/>
+            <Property name="text" type="java.lang.String" value="Fecha"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -345,7 +369,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de Salida"/>
+            <Property name="text" type="java.lang.String" value="N&#xba; De Personas"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -355,46 +379,48 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tipo de habitaciones"/>
+            <Property name="text" type="java.lang.String" value="Catering"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="60" width="130" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="campoHabitacionSencilla">
-          <Properties>
-            <Property name="selected" type="boolean" value="true"/>
-            <Property name="text" type="java.lang.String" value="Sencilla"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="140" y="60" width="70" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="campoHabitacionDoble">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="doble"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="230" y="60" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="fechaSalida">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="130" y="40" width="140" height="20"/>
+              <AbsoluteConstraints x="10" y="70" width="130" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="com.toedter.calendar.JDateChooser" name="fechaEntrada">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Fecha" noResource="true"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="130" y="20" width="140" height="20"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="Catering">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="1">
+                <StringItem index="0" value="Seleccione"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="130" y="70" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="Numero de Personas" noResource="true"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="130" y="40" width="90" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
