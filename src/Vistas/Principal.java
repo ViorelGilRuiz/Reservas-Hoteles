@@ -23,12 +23,12 @@ public class Principal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        botonReservaHabitaciones = new javax.swing.JButton();
+        botonReservaSalones = new javax.swing.JButton();
+        botonAltaEmpleados = new javax.swing.JButton();
+        botonverResevasHabitaciones = new javax.swing.JButton();
+        botonverReservaSalones = new javax.swing.JButton();
+        botonListadoEmpleados = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -54,39 +54,39 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
-        jButton1.setBackground(new java.awt.Color(255, 153, 0));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Reserva Habitaciones");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonReservaHabitaciones.setBackground(new java.awt.Color(255, 153, 0));
+        botonReservaHabitaciones.setForeground(new java.awt.Color(255, 255, 255));
+        botonReservaHabitaciones.setText("Reserva Habitaciones");
+        botonReservaHabitaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonReservaHabitacionesActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 153, 0));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Reserva Salones");
+        botonReservaSalones.setBackground(new java.awt.Color(255, 153, 0));
+        botonReservaSalones.setForeground(new java.awt.Color(255, 255, 255));
+        botonReservaSalones.setText("Reserva Salones");
 
-        jButton3.setBackground(new java.awt.Color(255, 153, 0));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Alta Empleados");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        botonAltaEmpleados.setBackground(new java.awt.Color(255, 153, 0));
+        botonAltaEmpleados.setForeground(new java.awt.Color(255, 255, 255));
+        botonAltaEmpleados.setText("Alta Empleados");
+        botonAltaEmpleados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                botonAltaEmpleadosActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 153, 0));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Ver Reservas Habitaciones");
+        botonverResevasHabitaciones.setBackground(new java.awt.Color(255, 153, 0));
+        botonverResevasHabitaciones.setForeground(new java.awt.Color(255, 255, 255));
+        botonverResevasHabitaciones.setText("Ver Reservas Habitaciones");
 
-        jButton5.setBackground(new java.awt.Color(255, 153, 0));
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Ver Reservas Salones");
+        botonverReservaSalones.setBackground(new java.awt.Color(255, 153, 0));
+        botonverReservaSalones.setForeground(new java.awt.Color(255, 255, 255));
+        botonverReservaSalones.setText("Ver Reservas Salones");
 
-        jButton6.setBackground(new java.awt.Color(255, 153, 0));
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Listado Empleados");
+        botonListadoEmpleados.setBackground(new java.awt.Color(255, 153, 0));
+        botonListadoEmpleados.setForeground(new java.awt.Color(255, 255, 255));
+        botonListadoEmpleados.setText("Listado Empleados");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -95,16 +95,16 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
+                    .addComponent(botonReservaHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonverResevasHabitaciones))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonReservaSalones, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonverReservaSalones, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(91, 91, 91)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonAltaEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonListadoEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(118, 118, 118))
         );
         jPanel3Layout.setVerticalGroup(
@@ -112,14 +112,14 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonReservaHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonReservaSalones, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonAltaEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonverResevasHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonverReservaSalones, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonListadoEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27))
         );
 
@@ -182,16 +182,16 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonReservaHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReservaHabitacionesActionPerformed
       ReservaHabitaciones RH = new ReservaHabitaciones(this, rootPaneCheckingEnabled);
       RH.setVisible(true);
       
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonReservaHabitacionesActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void botonAltaEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAltaEmpleadosActionPerformed
        FormularioEmpleados FE = new FormularioEmpleados(this, rootPaneCheckingEnabled);
        FE.setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_botonAltaEmpleadosActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -226,12 +226,12 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton botonAltaEmpleados;
+    private javax.swing.JButton botonListadoEmpleados;
+    private javax.swing.JButton botonReservaHabitaciones;
+    private javax.swing.JButton botonReservaSalones;
+    private javax.swing.JButton botonverReservaSalones;
+    private javax.swing.JButton botonverResevasHabitaciones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
