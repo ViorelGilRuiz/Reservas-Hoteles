@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Utilidades;
-
+import Vistas.ReservaHabitaciones;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -56,6 +56,7 @@ public class Utilidades {
     
     public static void limpiarcampos () {
     
+        for ()
     
     }
     
