@@ -11,25 +11,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Conexion {
-    
-    static Connection conn;
 
-    public static final String URL = "";
-    public static final String USARNAME = "";
-    public static final String PASSWORD = "";
+    public static Connection conn;
 
-    public static Connection conectar() {
+    public static Connection conectar() throws SQLException {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(URL, USARNAME, PASSWORD);
-
-        } catch (ClassNotFoundException | SQLException ex) {
+            conn = (Connection) DriverManager.getConnection("jdbc:mysql://145.14.151.1/u812167471_vio_reservas", "u812167471_vio_reservas", "2024-vioreservas");
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
-
         return null;
-
     }
 
     public static Connection cerrarconexion() {
@@ -40,5 +33,5 @@ public class Conexion {
         }
         return null;
     }
-    
+
 }
