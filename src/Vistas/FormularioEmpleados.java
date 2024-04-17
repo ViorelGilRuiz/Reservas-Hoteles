@@ -297,4 +297,41 @@ public class FormularioEmpleados extends java.awt.Dialog {
     private javax.swing.JTextField salarioBase;
     private javax.swing.JComboBox<String> turno;
     // End of variables declaration//GEN-END:variables
+
+    String dni , nom, ape ,ema, tur, usu, con;
+    int tel, sal;
+    
+    
+    public void registrar () {
+    
+        if (Utilidades.Utilidades.campoVacio(campoDNI)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoDNI);
+        } else if { Utilidades.Utilidades.campoVacio(campoNombre) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoNombre);
+        } else if (Utilidades.Utilidades.campoVacio(campoApellidos)) {
+               Utilidades.Utilidades.lanzaAlertaCampoVacio(campoApellidos);
+        } else if (Utilidades.Utilidades.campoVacio(campoTelefono)) {
+          Utilidades.Utilidades.lanzaAlertaCampoVacio(campoTelefono);
+        } else if (Utilidades.Utilidades.campoVacio(campoEmail)) {
+         Utilidades.Utilidades.lanzaAlertaCampoVacio(campoEmail);
+        } else if (Utilidades.Utilidades.campoVacio(fechaContrato)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(fechaContrato);
+         } else if (Utilidades.Utilidades.campoVacio(turno)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(turno);
+         }else if (Utilidades.Utilidades.campoVacio(salarioBase)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(salarioBase);
+         } else if (Utilidades.Utilidades.campoVacio(campoUsuario)){
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoUsuario);
+         }else if (Utilidades.Utilidades.campoVacio(campoContraseña)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio();
+         }
+            
+        
+    }
+
+
+    
+    
+    
+
 }
