@@ -252,6 +252,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoDNI">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Campo DNI" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -299,16 +302,34 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoNombre">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Campo Nombre" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoApellidos">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Campo Apellidos" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoEmail">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Campo Email" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoTelefono">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Campo Tel&#xe9;fono" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="salarioBase">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Salario Base" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoUsuario">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Campo Usuario" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="botonRegistrar">
               <Properties>
@@ -328,14 +349,21 @@
                     <StringItem index="3" value="Noches"/>
                   </StringArray>
                 </Property>
+                <Property name="name" type="java.lang.String" value="Turno" noResource="true"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="fechaContrato">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Fecha de Contrato" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="campoContrase&#xf1;a">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="Campo Contrase&#xf1;a" noResource="true"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

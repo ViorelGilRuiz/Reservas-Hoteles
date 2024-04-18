@@ -7,6 +7,8 @@ package Vistas;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import Utilidades.Utilidades;
+import modelo.Habitaciones;
+
 public class ReservaHabitaciones extends java.awt.Dialog {
 
     public ReservaHabitaciones(java.awt.Frame parent, boolean modal) {
@@ -18,6 +20,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jTextField2 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
@@ -102,6 +105,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         jLabel8.setText("Localidad");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
+        campoLocalidad.setName("Campo Localidad"); // NOI18N
         campoLocalidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoLocalidadActionPerformed(evt);
@@ -119,6 +123,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
         jPanel2.add(comprobarDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 120, -1));
 
+        campoDNI.setName("Campo DNI"); // NOI18N
         campoDNI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDNIActionPerformed(evt);
@@ -126,6 +131,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
         jPanel2.add(campoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 120, 30));
 
+        campoNombre.setName("Campo Nombre"); // NOI18N
         campoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoNombreActionPerformed(evt);
@@ -133,6 +139,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
         jPanel2.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 100, 20));
 
+        campoApellidos.setName("Campo Apellidos"); // NOI18N
         campoApellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoApellidosActionPerformed(evt);
@@ -140,6 +147,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
         jPanel2.add(campoApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 100, 20));
 
+        campoTelefono.setName("Campo Teléfono"); // NOI18N
         campoTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTelefonoActionPerformed(evt);
@@ -147,6 +155,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
         jPanel2.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 100, 20));
 
+        campoEmail.setName("Campo Email"); // NOI18N
         campoEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoEmailActionPerformed(evt);
@@ -154,6 +163,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
         jPanel2.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 100, 20));
 
+        campoDireccion.setName("Campo Dirección"); // NOI18N
         campoDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDireccionActionPerformed(evt);
@@ -161,6 +171,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
         jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 100, 20));
 
+        codigoPostal.setName("Campo Código Postal"); // NOI18N
         codigoPostal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoPostalActionPerformed(evt);
@@ -180,13 +191,21 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         jLabel11.setText("Tipo de habitaciones");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 130, -1));
 
+        buttonGroup1.add(campoHabitacionSencilla);
         campoHabitacionSencilla.setSelected(true);
         campoHabitacionSencilla.setText("Sencilla");
+        campoHabitacionSencilla.setName("Campo Habitación Sencilla"); // NOI18N
         jPanel3.add(campoHabitacionSencilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 70, -1));
 
+        buttonGroup1.add(campoHabitacionDoble);
         campoHabitacionDoble.setText("doble");
+        campoHabitacionDoble.setName("Campo Habitación Doble "); // NOI18N
         jPanel3.add(campoHabitacionDoble, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+
+        fechaSalida.setName("Fecha de Salida"); // NOI18N
         jPanel3.add(fechaSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 140, 20));
+
+        fechaEntrada.setName("Fecha de Entada"); // NOI18N
         jPanel3.add(fechaEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 140, 20));
 
         detalleFactura.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalle de la ultima reserva registrada"));
@@ -218,7 +237,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(92, 92, 92)
                         .addComponent(botonNuevaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,7 +320,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     }//GEN-LAST:event_codigoPostalActionPerformed
 
     private void botonNuevaReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaReservaActionPerformed
-        // TODO add your handling code here:
+        registrar();
     }//GEN-LAST:event_botonNuevaReservaActionPerformed
 
     private void comprobarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprobarDNIActionPerformed
@@ -329,6 +348,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonGenerarFactura;
     private javax.swing.JButton botonNuevaReserva;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField campoApellidos;
     private javax.swing.JTextField campoDNI;
     private javax.swing.JTextField campoDireccion;
@@ -361,51 +381,53 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 
-    String dni, nom, ape,ema, dire,loca;
+    String dni, nom, ape, ema, dire, loca;
     int tel, cod;
     Date fechaE, FechaS;
     String tipoHabi;
-    
-    
+
     public void registrar() {
-    
+
         if (Utilidades.campoVacio(campoDNI)) {
-        Utilidades.lanzaAlertaCampoVacio(campoDNI);
-        }else if (Utilidades.campoVacio(campoNombre)) {
-        Utilidades.lanzaAlertaCampoVacio(campoNombre);
-        }else if (Utilidades.campoVacio(campoApellidos)) {
-        Utilidades.lanzaAlertaCampoVacio(campoApellidos);
-        }else if (Utilidades.campoVacio(campoTelefono)) {
-        Utilidades.LazarAlertaCampoNumerico(this, campoTelefono);
-        }else if (Utilidades.campoVacio(campoEmail)) {
-        Utilidades.lanzaAlertaCampoVacio(campoEmail);
-        }else if (Utilidades.lanzaAlertaCampoVacio(codigoPostal)) {
-        Utilidades.LazarAlertaCampoNumerico(this, codigoPostal);
-        }else if (Utilidades.campoVacio(campoLocalidad)) {
-        Utilidades.lanzaAlertaCampoVacio(campoLocalidad);
-        } else if (fechaEntrada.getDate()==null){
-            JOptionPane.showMessageDialog(fechaEntrada, "Introduce una fecha de entrada por favor");            
-        }else if (fechaSalida.getDate()==null){
+            Utilidades.lanzaAlertaCampoVacio(campoDNI);
+        } else if (Utilidades.campoVacio(campoNombre)) {
+            Utilidades.lanzaAlertaCampoVacio(campoNombre);
+        } else if (Utilidades.campoVacio(campoApellidos)) {
+            Utilidades.lanzaAlertaCampoVacio(campoApellidos);
+        } else if (Utilidades.campoVacio(campoTelefono)) {
+            Utilidades.LazarAlertaCampoNumerico(this, campoTelefono);
+        } else if (Utilidades.campoVacio(campoEmail)) {
+            Utilidades.lanzaAlertaCampoVacio(campoEmail);
+        } else if (Utilidades.lanzaAlertaCampoVacio(codigoPostal)) {
+            Utilidades.LazarAlertaCampoNumerico(this, codigoPostal);
+        } else if (Utilidades.campoVacio(campoLocalidad)) {
+            Utilidades.lanzaAlertaCampoVacio(campoLocalidad);
+        } else if (fechaEntrada.getDate() == null) {
+            JOptionPane.showMessageDialog(fechaEntrada, "Introduce una fecha de entrada por favor");
+        } else if (fechaSalida.getDate() == null) {
             JOptionPane.showMessageDialog(fechaSalida, "Introduce una fecha de salida , por favor");
-        } else if (Utilidades.comboNoSeleccionado(tipoHabi)) {
-        }else {
-        
-                dni = campoDNI.getText();
-                nom = campoNombre.getText();
-                ape = campoApellidos.getText();
-                tel = Integer.parseInt(campoTelefono.getText());
-                ema = campoEmail.getText();
-                cod = Integer.parseInt(codigoPostal.getText());
-                loca = campoLocalidad.getText();
-                dire = campoDireccion.getText();
-                fechaE = fechaEntrada.getDate();
-                FechaS  = fechaSalida.getDate();
+        } else {
 
-        
+            dni = campoDNI.getText();
+            nom = campoNombre.getText();
+            ape = campoApellidos.getText();
+            tel = Integer.parseInt(campoTelefono.getText());
+            ema = campoEmail.getText();
+            cod = Integer.parseInt(codigoPostal.getText());
+            loca = campoLocalidad.getText();
+            dire = campoDireccion.getText();
+            fechaE = fechaEntrada.getDate();
+            FechaS = fechaSalida.getDate();
+
+            if (campoHabitacionSencilla.isSelected()) {
+                tipoHabi = "SI";
+            } else {
+                tipoHabi = "No";
+            }
+
+            Habitaciones ha = new Habitaciones(ERROR, dni, ema, ema, tipoHabi, tel, HEIGHT, dni);
+
         }
-        
-        }
+
     }
-
-
-
+}

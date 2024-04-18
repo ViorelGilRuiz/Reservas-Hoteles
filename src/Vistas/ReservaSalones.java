@@ -202,6 +202,11 @@ public class ReservaSalones extends java.awt.Dialog {
         });
 
         botonNuevaReserva.setText("Nueva Reserva ");
+        botonNuevaReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNuevaReservaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -298,6 +303,10 @@ public class ReservaSalones extends java.awt.Dialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_codigoPostalActionPerformed
 
+    private void botonNuevaReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaReservaActionPerformed
+        registrar();
+    }//GEN-LAST:event_botonNuevaReservaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -375,11 +384,10 @@ public class ReservaSalones extends java.awt.Dialog {
             JOptionPane.showMessageDialog(this, "Debes introducir una fecha de entrada por favor ");
         } else if (!Utilidades.Utilidades.enteroCorrecto(numeroPersonas)) {
             Utilidades.Utilidades.LazarAlertaCampoNumerico(this, numeroPersonas);
-        } else if (Utilidades.Utilidades.comboNoSeleccionado (Catering) 
-        ) {
+        } else if (Utilidades.Utilidades.comboNoSeleccionado (Catering)) {
         Utilidades.Utilidades.alertaComboNoSeleccionado(this, Catering);
          } else {
-    
+            
         dni = campoDNI.getText();
         nom = campoNombre.getText();
         ape = campoApellidos.getText();
@@ -392,7 +400,7 @@ public class ReservaSalones extends java.awt.Dialog {
         numP = Integer.parseInt(numeroPersonas.getText());
         cat = (String) Catering.getSelectedItem();
 
-        salones salon = new Salones(ERROR, dni, ema, PROPERTIES, cat, ERROR, dni);
+        Salones sa = new Salones (ERROR, dni, ema, PROPERTIES, cat, ERROR, dni);
 
     }
 

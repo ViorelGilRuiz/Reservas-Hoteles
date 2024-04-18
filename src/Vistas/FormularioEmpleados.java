@@ -110,6 +110,8 @@ public class FormularioEmpleados extends java.awt.Dialog {
 
         jLabel3.setText("DNI");
 
+        campoDNI.setName("Campo DNI"); // NOI18N
+
         jLabel4.setText("Apellidos");
 
         jLabel5.setText("Nombre");
@@ -128,6 +130,18 @@ public class FormularioEmpleados extends java.awt.Dialog {
 
         jLabel12.setText("Contraseña");
 
+        campoNombre.setName("Campo Nombre"); // NOI18N
+
+        campoApellidos.setName("Campo Apellidos"); // NOI18N
+
+        campoEmail.setName("Campo Email"); // NOI18N
+
+        campoTelefono.setName("Campo Teléfono"); // NOI18N
+
+        salarioBase.setName("Salario Base"); // NOI18N
+
+        campoUsuario.setName("Campo Usuario"); // NOI18N
+
         botonRegistrar.setText("Registrar");
         botonRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +150,11 @@ public class FormularioEmpleados extends java.awt.Dialog {
         });
 
         turno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Mañanas", "Tardes", "Noches" }));
+        turno.setName("Turno"); // NOI18N
+
+        fechaContrato.setName("Fecha de Contrato"); // NOI18N
+
+        campoContraseña.setName("Campo Contraseña"); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
