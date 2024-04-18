@@ -4,9 +4,11 @@
  */
 package modelo;
 
+import java.util.Date;
+
 public class Empleado {
 
-    public Empleado(String dniEmpleado, String nombre, String apellidos, int telefono, String email, String fechaContrato, String turno, double salarioBase, String usuario, String contrasenya) {
+    public Empleado(String dniEmpleado, String nombre, String apellidos, int telefono, String email, Date fechaContrato, String turno, String usuario, String contrasenya) {
         this.dniEmpleado = dniEmpleado;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -14,7 +16,6 @@ public class Empleado {
         this.email = email;
         this.fechaContrato = fechaContrato;
         this.turno = turno;
-        this.salarioBase = salarioBase;
         this.usuario = usuario;
         this.contrasenya = contrasenya;
     }
@@ -59,11 +60,11 @@ public class Empleado {
         this.email = email;
     }
 
-    public String getFechaContrato() {
+    public Date getFechaContrato() {
         return fechaContrato;
     }
 
-    public void setFechaContrato(String fechaContrato) {
+    public void setFechaContrato(Date fechaContrato) {
         this.fechaContrato = fechaContrato;
     }
 
@@ -73,14 +74,6 @@ public class Empleado {
 
     public void setTurno(String turno) {
         this.turno = turno;
-    }
-
-    public double getSalarioBase() {
-        return salarioBase;
-    }
-
-    public void setSalarioBase(double salarioBase) {
-        this.salarioBase = salarioBase;
     }
 
     public String getUsuario() {
@@ -101,18 +94,16 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado{" + "dniEmpleado=" + dniEmpleado + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", email=" + email + ", fechaContrato=" + fechaContrato + ", turno=" + turno + ", salarioBase=" + salarioBase + ", usuario=" + usuario + ", contrasenya=" + contrasenya + '}';
+        return "Empleado{" + "dniEmpleado=" + dniEmpleado + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", email=" + email + ", fechaContrato=" + fechaContrato + ", turno=" + turno + ", usuario=" + usuario + ", contrasenya=" + contrasenya + '}';
     }
-    
-    
+   
     String dniEmpleado;
     String nombre;
     String apellidos;
     int telefono;
     String email;
-    String fechaContrato;
-    String turno;
-    double salarioBase;
+    Date fechaContrato;
+    String turno;    
     String usuario;
     String contrasenya;
     

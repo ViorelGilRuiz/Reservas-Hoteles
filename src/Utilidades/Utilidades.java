@@ -25,7 +25,7 @@ public class Utilidades {
     }
 
     public static boolean campoVacio(JTextField campo) {
-        return !campo.getText().isBlank();
+        return campo.getText().isBlank();
     }
 
     public static boolean lanzaAlertaCampoVacio(JTextField campo) {

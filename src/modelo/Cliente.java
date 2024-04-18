@@ -6,13 +6,23 @@ package modelo;
 
 public class Cliente {
 
-    public Cliente(String nombre, String apellidos, int telefono, String email, String codigoPostal, String localiidad) {
+    public Cliente(String DNI, String nombre, String apellidos, int telefono, String email, String codigoPostal, String localiidad, String catering) {
+        this.DNI = DNI;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;
         this.email = email;
         this.codigoPostal = codigoPostal;
         this.localiidad = localiidad;
+        this.catering = catering;
+    }
+
+    public String getDNI() {
+        return DNI;
+    }
+
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
     }
 
     public String getNombre() {
@@ -63,17 +73,26 @@ public class Cliente {
         this.localiidad = localiidad;
     }
 
+    public String getCatering() {
+        return catering;
+    }
+
+    public void setCatering(String catering) {
+        this.catering = catering;
+    }
+
     @Override
     public String toString() {
-        return "Cliente{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", email=" + email + ", codigoPostal=" + codigoPostal + ", localiidad=" + localiidad + '}';
+        return "Cliente{" + "DNI=" + DNI + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", email=" + email + ", codigoPostal=" + codigoPostal + ", localiidad=" + localiidad + ", catering=" + catering + '}';
     }
-    
+    String DNI;
     String nombre;
     String apellidos;
     int telefono;
     String email;
     String codigoPostal;
     String localiidad;
+    String catering;
     
     
 }

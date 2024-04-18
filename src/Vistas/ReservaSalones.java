@@ -4,6 +4,7 @@
  */
 package Vistas;
 
+import Utilidades.Utilidades;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import modelo.Salones;
@@ -82,25 +83,25 @@ public class ReservaSalones extends java.awt.Dialog {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 40, -1));
 
         jLabel2.setText("Nombre");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 50, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 50, -1));
 
         jLabel3.setText("Apellidos");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         jLabel4.setText("Telefono");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         jLabel5.setText("Email");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 60, -1));
 
         jLabel6.setText("Direccion");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         jLabel7.setText("CP");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 20, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 20, -1));
 
         jLabel8.setText("Localidad");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
 
         campoLocalidad.setName("Localidad"); // NOI18N
         campoLocalidad.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +109,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 campoLocalidadActionPerformed(evt);
             }
         });
-        jPanel2.add(campoLocalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 100, 20));
+        jPanel2.add(campoLocalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 100, 30));
 
         comprobarDNI.setBackground(new java.awt.Color(255, 153, 0));
         comprobarDNI.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,7 +122,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 campoDNIActionPerformed(evt);
             }
         });
-        jPanel2.add(campoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 120, 20));
+        jPanel2.add(campoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 100, 40));
 
         campoNombre.setName("Nombre"); // NOI18N
         campoNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +130,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 campoNombreActionPerformed(evt);
             }
         });
-        jPanel2.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 100, 20));
+        jPanel2.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 100, 50));
 
         campoApellidos.setName("Apellidos"); // NOI18N
         campoApellidos.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +138,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 campoApellidosActionPerformed(evt);
             }
         });
-        jPanel2.add(campoApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 100, 20));
+        jPanel2.add(campoApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 100, 40));
 
         campoTelefono.setName("Telefono"); // NOI18N
         campoTelefono.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +146,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 campoTelefonoActionPerformed(evt);
             }
         });
-        jPanel2.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 100, 20));
+        jPanel2.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 100, 30));
 
         campoEmail.setName("Email"); // NOI18N
         campoEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +154,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 campoEmailActionPerformed(evt);
             }
         });
-        jPanel2.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 100, 20));
+        jPanel2.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 100, 30));
 
         campoDireccion.setName("Direccion"); // NOI18N
         campoDireccion.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +162,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 campoDireccionActionPerformed(evt);
             }
         });
-        jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 100, 20));
+        jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 100, 40));
 
         codigoPostal.setName("Codigo Postal"); // NOI18N
         codigoPostal.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +170,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 codigoPostalActionPerformed(evt);
             }
         });
-        jPanel2.add(codigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 100, 20));
+        jPanel2.add(codigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 100, 40));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de la reserva"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -183,10 +184,11 @@ public class ReservaSalones extends java.awt.Dialog {
         jLabel11.setText("Catering");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 130, -1));
 
-        fechaEntrada.setName("Fecha"); // NOI18N
+        fechaEntrada.setName("Fecha de Entrada"); // NOI18N
         jPanel3.add(fechaEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 140, 20));
 
-        Catering.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+        Catering.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Desayuno", "Almuerzo", "Comida", "Cena" }));
+        Catering.setName("Campo Catering"); // NOI18N
         jPanel3.add(Catering, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
 
         numeroPersonas.setName("Numero de Personas"); // NOI18N
@@ -219,7 +221,7 @@ public class ReservaSalones extends java.awt.Dialog {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
+                        .addGap(78, 78, 78)
                         .addComponent(botonNuevaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -232,26 +234,28 @@ public class ReservaSalones extends java.awt.Dialog {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(detalleFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(botonGenerarFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(115, 115, 115))))
+                        .addGap(113, 113, 113))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, 0))
                     .addComponent(detalleFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonNuevaReserva)
-                    .addComponent(botonGenerarFactura))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(botonGenerarFactura)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonNuevaReserva)
+                .addContainerGap())
         );
 
         pack();
@@ -359,43 +363,43 @@ public class ReservaSalones extends java.awt.Dialog {
     private javax.swing.JTextField numeroPersonas;
     // End of variables declaration//GEN-END:variables
 
-    String dni, nom, ape, ema, dire, loca, cat;
-    int tel, cod, numP;
+    String dni, nom, ape, ema, dire, loc, cat;
+    int tele, cod, numP;
     Date fecha;
 
     public void registrar() {
-        if (Utilidades.Utilidades.campoVacio(campoDNI)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoDNI);
-        } else if (Utilidades.Utilidades.campoVacio(campoNombre)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoNombre);
-        } else if (Utilidades.Utilidades.lanzaAlertaCampoVacio(campoApellidos)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoApellidos);
-        } else if (Utilidades.Utilidades.rangotel(tel)) {
-            Utilidades.Utilidades.LazarAlertaCampoNumerico(this, campoTelefono);
-        } else if (Utilidades.Utilidades.campoVacio(campoEmail)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoEmail);
-        } else if (Utilidades.Utilidades.campoVacio(campoDireccion)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoDireccion);
-        } else if (Utilidades.Utilidades.campoVacio(codigoPostal)) {
-            Utilidades.Utilidades.LazarAlertaCampoNumerico(this, codigoPostal);
-        } else if (Utilidades.Utilidades.campoVacio(campoLocalidad)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoLocalidad);
+        if (Utilidades.campoVacio(campoDNI)) {
+            Utilidades.lanzaAlertaCampoVacio(campoDNI);
+        } else if (Utilidades.campoVacio(campoNombre)) {
+            Utilidades.lanzaAlertaCampoVacio(campoNombre);
+        } else if (Utilidades.lanzaAlertaCampoVacio(campoApellidos)) {
+            Utilidades.lanzaAlertaCampoVacio(campoApellidos);
+        } else if (Utilidades.rangotel(tele)) {
+            Utilidades.LazarAlertaCampoNumerico(this, campoTelefono);
+        } else if (Utilidades.campoVacio(campoEmail)) {
+            Utilidades.lanzaAlertaCampoVacio(campoEmail);
+        } else if (Utilidades.campoVacio(campoDireccion)) {
+            Utilidades.lanzaAlertaCampoVacio(campoDireccion);
+        } else if (Utilidades.campoVacio(codigoPostal)) {
+            Utilidades.LazarAlertaCampoNumerico(this, codigoPostal);
+        } else if (Utilidades.campoVacio(campoLocalidad)) {
+            Utilidades.lanzaAlertaCampoVacio(campoLocalidad);
         } else if (fechaEntrada.getDate() == null) {
             JOptionPane.showMessageDialog(this, "Debes introducir una fecha de entrada por favor ");
-        } else if (!Utilidades.Utilidades.enteroCorrecto(numeroPersonas)) {
-            Utilidades.Utilidades.LazarAlertaCampoNumerico(this, numeroPersonas);
-        } else if (Utilidades.Utilidades.comboNoSeleccionado (Catering)) {
-        Utilidades.Utilidades.alertaComboNoSeleccionado(this, Catering);
+        } else if (!Utilidades.enteroCorrecto(numeroPersonas)) {
+            Utilidades.LazarAlertaCampoNumerico(this, numeroPersonas);
+        } else if (Utilidades.comboNoSeleccionado (Catering)) {
+        Utilidades.alertaComboNoSeleccionado(this, Catering);
          } else {
             
         dni = campoDNI.getText();
         nom = campoNombre.getText();
         ape = campoApellidos.getText();
-        tel = Integer.parseInt(campoTelefono.getText());
+        tele = Integer.parseInt(campoTelefono.getText());
         ema = campoEmail.getText();
         dire = campoDireccion.getText();
         cod = Integer.parseInt(codigoPostal.getText());
-        loca = campoLocalidad.getText();
+        loc = campoLocalidad.getText();
         fecha = fechaEntrada.getDate();
         numP = Integer.parseInt(numeroPersonas.getText());
         cat = (String) Catering.getSelectedItem();

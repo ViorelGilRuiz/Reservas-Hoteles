@@ -4,8 +4,14 @@
  */
 package Vistas;
 
+import Utilidades.Utilidades;
+import static Utilidades.Utilidades.campoVacio;
 import bbdd.Conexion;
+import bbdd.ConsultasEmpleados;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import modelo.Empleado;
 
@@ -45,14 +51,12 @@ public class FormularioEmpleados extends java.awt.Dialog {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         campoNombre = new javax.swing.JTextField();
         campoApellidos = new javax.swing.JTextField();
         campoEmail = new javax.swing.JTextField();
         campoTelefono = new javax.swing.JTextField();
-        salarioBase = new javax.swing.JTextField();
         campoUsuario = new javax.swing.JTextField();
         botonRegistrar = new javax.swing.JButton();
         turno = new javax.swing.JComboBox<>();
@@ -124,8 +128,6 @@ public class FormularioEmpleados extends java.awt.Dialog {
 
         jLabel9.setText("Turno");
 
-        jLabel10.setText("Salario Base");
-
         jLabel11.setText("Usuario");
 
         jLabel12.setText("Contraseña");
@@ -137,8 +139,6 @@ public class FormularioEmpleados extends java.awt.Dialog {
         campoEmail.setName("Campo Email"); // NOI18N
 
         campoTelefono.setName("Campo Teléfono"); // NOI18N
-
-        salarioBase.setName("Salario Base"); // NOI18N
 
         campoUsuario.setName("Campo Usuario"); // NOI18N
 
@@ -173,13 +173,11 @@ public class FormularioEmpleados extends java.awt.Dialog {
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(campoUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
-                    .addComponent(salarioBase, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                     .addComponent(campoEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                     .addComponent(campoApellidos, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                     .addComponent(campoNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
@@ -225,11 +223,7 @@ public class FormularioEmpleados extends java.awt.Dialog {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel10)
-                                    .addComponent(salarioBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
+                                .addGap(58, 58, 58)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel11)
                                     .addComponent(campoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -281,7 +275,11 @@ public class FormularioEmpleados extends java.awt.Dialog {
     }//GEN-LAST:event_closeDialog
 
     private void botonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarActionPerformed
-        registrar();
+        try {
+            registrar();
+        } catch (SQLException ex) {
+            Logger.getLogger(FormularioEmpleados.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_botonRegistrarActionPerformed
 
     /**
@@ -313,7 +311,6 @@ public class FormularioEmpleados extends java.awt.Dialog {
     private javax.swing.JTextField campoUsuario;
     private com.toedter.calendar.JDateChooser fechaContrato;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
@@ -328,7 +325,6 @@ public class FormularioEmpleados extends java.awt.Dialog {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField salarioBase;
     private javax.swing.JComboBox<String> turno;
     // End of variables declaration//GEN-END:variables
 
@@ -336,42 +332,52 @@ public class FormularioEmpleados extends java.awt.Dialog {
     int tel, sal;
     Date fecha;
 
-    public void registrar() {
+    public void registrar() throws SQLException {
 
-        if (Utilidades.Utilidades.campoVacio(campoDNI)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoDNI);
-        } else if (Utilidades.Utilidades.campoVacio(campoNombre)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoNombre);
-        } else if (Utilidades.Utilidades.campoVacio(campoApellidos)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoApellidos);
-        } else if (Utilidades.Utilidades.campoVacio(campoTelefono)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoTelefono);
-        } else if (Utilidades.Utilidades.campoVacio(campoEmail)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoEmail);
-        } else if (fechaContrato.getDate()==null) {
+        if (Utilidades.campoVacio(campoDNI)) {
+            Utilidades.lanzaAlertaCampoVacio(campoDNI);
+        } else if (Utilidades.campoVacio(campoNombre)) {
+            Utilidades.lanzaAlertaCampoVacio(campoNombre);
+        } else if (Utilidades.campoVacio(campoApellidos)) {
+            Utilidades.lanzaAlertaCampoVacio(campoApellidos);
+        } else if (Utilidades.campoVacio(campoTelefono)) {
+            Utilidades.lanzaAlertaCampoVacio(campoTelefono);
+        } else if (Utilidades.campoVacio(campoEmail)) {
+            Utilidades.lanzaAlertaCampoVacio(campoEmail);
+        } else if (fechaContrato.getDate() == null) {
             JOptionPane.showMessageDialog(this, "Debes de seleccionar una fecha de Contrato por favor");
-        
-        } else if (Utilidades.Utilidades.comboNoSeleccionado(turno)) {
-            Utilidades.Utilidades.alertaComboNoSeleccionado(this, turno);
-        } else if (Utilidades.Utilidades.campoVacio(salarioBase)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(salarioBase);
-        } else if (Utilidades.Utilidades.campoVacio(campoUsuario)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoUsuario);
-        } else if (Utilidades.Utilidades.campoVacio(campoContraseña)) {
-            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoContraseña);
+        } else if (Utilidades.comboNoSeleccionado(turno)) {
+            Utilidades.alertaComboNoSeleccionado(this, turno);
+        } else if (Utilidades.campoVacio(campoUsuario)) {
+            Utilidades.lanzaAlertaCampoVacio(campoUsuario);
+        } else if (Utilidades.campoVacio(campoContraseña)) {
+            Utilidades.lanzaAlertaCampoVacio(campoContraseña);
         } else {
 
             dni = campoDNI.getText();
             nom = campoNombre.getText();
             ape = campoApellidos.getText();
             tel = Integer.parseInt(campoTelefono.getText());
+            ema = campoEmail.getText();
             fecha = fechaContrato.getDate();
-            sal = Integer.parseInt(salarioBase.getText());
             usu = campoUsuario.getText();
             con = new String(campoContraseña.getPassword());
 
-            Empleado em = new Empleado(dni, nom, ape, tel, ema, con, tur, ALLBITS, usu, con);
+            Empleado em = new Empleado(dni, nom, ape, tel, ema, fecha, tur, usu, con);
+
+            Conexion.conectar();
+
+            if (ConsultasEmpleados.registrarEmpleado(em)) {
+
+                JOptionPane.showMessageDialog(this, "Registro realizado correctamente.");
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al realizar el registro, int?ntalo m?s tarde.");
+            }
+            Conexion.cerrarconexion();
         }
 
     }
+
 }
+

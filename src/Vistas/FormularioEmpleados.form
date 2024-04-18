@@ -140,14 +140,12 @@
                           <Component id="jLabel6" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
                           <Component id="jLabel8" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
                           <Component id="jLabel11" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
                           <Component id="jLabel12" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="campoUsuario" pref="132" max="32767" attributes="0"/>
-                          <Component id="salarioBase" pref="132" max="32767" attributes="0"/>
                           <Component id="campoEmail" pref="132" max="32767" attributes="0"/>
                           <Component id="campoApellidos" pref="132" max="32767" attributes="0"/>
                           <Component id="campoNombre" pref="132" max="32767" attributes="0"/>
@@ -202,12 +200,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="salarioBase" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="campoUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -286,11 +279,6 @@
                 <Property name="text" type="java.lang.String" value="Turno"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Salario Base"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Usuario"/>
@@ -319,11 +307,6 @@
             <Component class="javax.swing.JTextField" name="campoTelefono">
               <Properties>
                 <Property name="name" type="java.lang.String" value="Campo Tel&#xe9;fono" noResource="true"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="salarioBase">
-              <Properties>
-                <Property name="name" type="java.lang.String" value="Salario Base" noResource="true"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="campoUsuario">
