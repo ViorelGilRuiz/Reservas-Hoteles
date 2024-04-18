@@ -4,6 +4,9 @@
  */
 package Vistas;
 
+import java.util.Date;
+import javax.swing.JOptionPane;
+import Utilidades.Utilidades;
 public class ReservaHabitaciones extends java.awt.Dialog {
 
     public ReservaHabitaciones(java.awt.Frame parent, boolean modal) {
@@ -66,7 +69,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 330, -1));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 300, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/logo.png"))); // NOI18N
         jLabel12.setText("jLabel12");
@@ -79,36 +82,41 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 40, -1));
 
         jLabel2.setText("Nombre");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 50, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 50, -1));
 
         jLabel3.setText("Apellidos");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jLabel4.setText("Telefono");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jLabel5.setText("Email");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 60, -1));
 
         jLabel6.setText("Direccion");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         jLabel7.setText("CP");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 20, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 20, -1));
 
         jLabel8.setText("Localidad");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
         campoLocalidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoLocalidadActionPerformed(evt);
             }
         });
-        jPanel2.add(campoLocalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 100, 20));
+        jPanel2.add(campoLocalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 100, 20));
 
         comprobarDNI.setBackground(new java.awt.Color(255, 153, 0));
         comprobarDNI.setForeground(new java.awt.Color(255, 255, 255));
         comprobarDNI.setText("Comprobar DNI");
+        comprobarDNI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprobarDNIActionPerformed(evt);
+            }
+        });
         jPanel2.add(comprobarDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 120, -1));
 
         campoDNI.addActionListener(new java.awt.event.ActionListener() {
@@ -116,49 +124,49 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                 campoDNIActionPerformed(evt);
             }
         });
-        jPanel2.add(campoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 120, 20));
+        jPanel2.add(campoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 120, 30));
 
         campoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoNombreActionPerformed(evt);
             }
         });
-        jPanel2.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 100, 20));
+        jPanel2.add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 100, 20));
 
         campoApellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoApellidosActionPerformed(evt);
             }
         });
-        jPanel2.add(campoApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 100, 20));
+        jPanel2.add(campoApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 100, 20));
 
         campoTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoTelefonoActionPerformed(evt);
             }
         });
-        jPanel2.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 100, 20));
+        jPanel2.add(campoTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 100, 20));
 
         campoEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoEmailActionPerformed(evt);
             }
         });
-        jPanel2.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 100, 20));
+        jPanel2.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 100, 20));
 
         campoDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoDireccionActionPerformed(evt);
             }
         });
-        jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 100, 20));
+        jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 100, 20));
 
         codigoPostal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoPostalActionPerformed(evt);
             }
         });
-        jPanel2.add(codigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 100, 20));
+        jPanel2.add(codigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 100, 20));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de la reserva"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -191,6 +199,11 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         });
 
         botonNuevaReserva.setText("Nueva Reserva ");
+        botonNuevaReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNuevaReservaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -239,6 +252,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void closeDialog(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_closeDialog
@@ -285,6 +299,14 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     private void codigoPostalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoPostalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_codigoPostalActionPerformed
+
+    private void botonNuevaReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaReservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonNuevaReservaActionPerformed
+
+    private void comprobarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprobarDNIActionPerformed
+        Utilidades.validacionLetraDni(dni);
+    }//GEN-LAST:event_comprobarDNIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,4 +360,52 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
-}
+
+    String dni, nom, ape,ema, dire,loca;
+    int tel, cod;
+    Date fechaE, FechaS;
+    String tipoHabi;
+    
+    
+    public void registrar() {
+    
+        if (Utilidades.campoVacio(campoDNI)) {
+        Utilidades.lanzaAlertaCampoVacio(campoDNI);
+        }else if (Utilidades.campoVacio(campoNombre)) {
+        Utilidades.lanzaAlertaCampoVacio(campoNombre);
+        }else if (Utilidades.campoVacio(campoApellidos)) {
+        Utilidades.lanzaAlertaCampoVacio(campoApellidos);
+        }else if (Utilidades.campoVacio(campoTelefono)) {
+        Utilidades.LazarAlertaCampoNumerico(this, campoTelefono);
+        }else if (Utilidades.campoVacio(campoEmail)) {
+        Utilidades.lanzaAlertaCampoVacio(campoEmail);
+        }else if (Utilidades.lanzaAlertaCampoVacio(codigoPostal)) {
+        Utilidades.LazarAlertaCampoNumerico(this, codigoPostal);
+        }else if (Utilidades.campoVacio(campoLocalidad)) {
+        Utilidades.lanzaAlertaCampoVacio(campoLocalidad);
+        } else if (fechaEntrada.getDate()==null){
+            JOptionPane.showMessageDialog(fechaEntrada, "Introduce una fecha de entrada por favor");            
+        }else if (fechaSalida.getDate()==null){
+            JOptionPane.showMessageDialog(fechaSalida, "Introduce una fecha de salida , por favor");
+        } else if (Utilidades.comboNoSeleccionado(tipoHabi)) {
+        }else {
+        
+                dni = campoDNI.getText();
+                nom = campoNombre.getText();
+                ape = campoApellidos.getText();
+                tel = Integer.parseInt(campoTelefono.getText());
+                ema = campoEmail.getText();
+                cod = Integer.parseInt(codigoPostal.getText());
+                loca = campoLocalidad.getText();
+                dire = campoDireccion.getText();
+                fechaE = fechaEntrada.getDate();
+                FechaS  = fechaSalida.getDate();
+
+        
+        }
+        
+        }
+    }
+
+
+

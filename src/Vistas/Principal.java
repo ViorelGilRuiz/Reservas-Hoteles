@@ -32,7 +32,7 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         botonReservaHabitaciones.setBackground(new java.awt.Color(255, 153, 0));
         botonReservaHabitaciones.setForeground(new java.awt.Color(255, 255, 255));
@@ -46,6 +46,11 @@ public class Principal extends javax.swing.JFrame {
         botonReservaSalones.setBackground(new java.awt.Color(255, 153, 0));
         botonReservaSalones.setForeground(new java.awt.Color(255, 255, 255));
         botonReservaSalones.setText("Reserva Salones");
+        botonReservaSalones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonReservaSalonesActionPerformed(evt);
+            }
+        });
 
         botonAltaEmpleados.setBackground(new java.awt.Color(255, 153, 0));
         botonAltaEmpleados.setForeground(new java.awt.Color(255, 255, 255));
@@ -59,14 +64,29 @@ public class Principal extends javax.swing.JFrame {
         botonverResevasHabitaciones.setBackground(new java.awt.Color(255, 153, 0));
         botonverResevasHabitaciones.setForeground(new java.awt.Color(255, 255, 255));
         botonverResevasHabitaciones.setText("Ver Reservas Habitaciones");
+        botonverResevasHabitaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonverResevasHabitacionesActionPerformed(evt);
+            }
+        });
 
         botonverReservaSalones.setBackground(new java.awt.Color(255, 153, 0));
         botonverReservaSalones.setForeground(new java.awt.Color(255, 255, 255));
         botonverReservaSalones.setText("Ver Reservas Salones");
+        botonverReservaSalones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonverReservaSalonesActionPerformed(evt);
+            }
+        });
 
         botonListadoEmpleados.setBackground(new java.awt.Color(255, 153, 0));
         botonListadoEmpleados.setForeground(new java.awt.Color(255, 255, 255));
         botonListadoEmpleados.setText("Listado Empleados");
+        botonListadoEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonListadoEmpleadosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -95,12 +115,13 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(botonReservaHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonReservaSalones, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonAltaEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonverResevasHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonverReservaSalones, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(botonverResevasHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonverReservaSalones, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(botonListadoEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/hotel1.jpg"))); // NOI18N
@@ -113,9 +134,9 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addContainerGap(600, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,6 +174,7 @@ public class Principal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonAltaEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAltaEmpleadosActionPerformed
@@ -164,6 +186,26 @@ public class Principal extends javax.swing.JFrame {
         ReservaHabitaciones RH = new ReservaHabitaciones(this, rootPaneCheckingEnabled);
         RH.setVisible(true);
     }//GEN-LAST:event_botonReservaHabitacionesActionPerformed
+
+    private void botonReservaSalonesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReservaSalonesActionPerformed
+     ReservaSalones rs = new ReservaSalones(this, rootPaneCheckingEnabled);
+     rs.setVisible(true);
+    }//GEN-LAST:event_botonReservaSalonesActionPerformed
+
+    private void botonverResevasHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonverResevasHabitacionesActionPerformed
+        listadoDeReservaHabitaciones lh = new listadoDeReservaHabitaciones(this, rootPaneCheckingEnabled);
+        lh.setVisible(true);
+    }//GEN-LAST:event_botonverResevasHabitacionesActionPerformed
+
+    private void botonverReservaSalonesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonverReservaSalonesActionPerformed
+      listadoDeReservaSalones ls = new listadoDeReservaSalones(this, rootPaneCheckingEnabled);
+      ls.setVisible(true);
+    }//GEN-LAST:event_botonverReservaSalonesActionPerformed
+
+    private void botonListadoEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonListadoEmpleadosActionPerformed
+      listadoDeEmpleados le = new listadoDeEmpleados(this, rootPaneCheckingEnabled);
+      le.setVisible(true);
+    }//GEN-LAST:event_botonListadoEmpleadosActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -4,6 +4,10 @@
  */
 package Vistas;
 
+import java.util.Date;
+import javax.swing.JOptionPane;
+import modelo.Salones;
+
 public class ReservaSalones extends java.awt.Dialog {
 
     public ReservaSalones(java.awt.Frame parent, boolean modal) {
@@ -42,7 +46,7 @@ public class ReservaSalones extends java.awt.Dialog {
         jLabel11 = new javax.swing.JLabel();
         fechaEntrada = new com.toedter.calendar.JDateChooser();
         Catering = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        numeroPersonas = new javax.swing.JTextField();
         detalleFactura = new javax.swing.JPanel();
         botonGenerarFactura = new javax.swing.JButton();
         botonNuevaReserva = new javax.swing.JButton();
@@ -185,8 +189,8 @@ public class ReservaSalones extends java.awt.Dialog {
         Catering.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
         jPanel3.add(Catering, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
 
-        jTextField1.setName("Numero de Personas"); // NOI18N
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 90, -1));
+        numeroPersonas.setName("Numero de Personas"); // NOI18N
+        jPanel3.add(numeroPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 90, -1));
 
         detalleFactura.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalle de la ultima reserva registrada"));
 
@@ -246,6 +250,7 @@ public class ReservaSalones extends java.awt.Dialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void closeDialog(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_closeDialog
@@ -341,7 +346,56 @@ public class ReservaSalones extends java.awt.Dialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField numeroPersonas;
     // End of variables declaration//GEN-END:variables
+
+    String dni, nom, ape, ema, dire, loca, cat;
+    int tel, cod, numP;
+    Date fecha;
+
+    public void registrar() {
+        if (Utilidades.Utilidades.campoVacio(campoDNI)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoDNI);
+        } else if (Utilidades.Utilidades.campoVacio(campoNombre)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoNombre);
+        } else if (Utilidades.Utilidades.lanzaAlertaCampoVacio(campoApellidos)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoApellidos);
+        } else if (Utilidades.Utilidades.rangotel(tel)) {
+            Utilidades.Utilidades.LazarAlertaCampoNumerico(this, campoTelefono);
+        } else if (Utilidades.Utilidades.campoVacio(campoEmail)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoEmail);
+        } else if (Utilidades.Utilidades.campoVacio(campoDireccion)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoDireccion);
+        } else if (Utilidades.Utilidades.campoVacio(codigoPostal)) {
+            Utilidades.Utilidades.LazarAlertaCampoNumerico(this, codigoPostal);
+        } else if (Utilidades.Utilidades.campoVacio(campoLocalidad)) {
+            Utilidades.Utilidades.lanzaAlertaCampoVacio(campoLocalidad);
+        } else if (fechaEntrada.getDate() == null) {
+            JOptionPane.showMessageDialog(this, "Debes introducir una fecha de entrada por favor ");
+        } else if (!Utilidades.Utilidades.enteroCorrecto(numeroPersonas)) {
+            Utilidades.Utilidades.LazarAlertaCampoNumerico(this, numeroPersonas);
+        } else if (Utilidades.Utilidades.comboNoSeleccionado (Catering) 
+        ) {
+        Utilidades.Utilidades.alertaComboNoSeleccionado(this, Catering);
+         } else {
+    
+        dni = campoDNI.getText();
+        nom = campoNombre.getText();
+        ape = campoApellidos.getText();
+        tel = Integer.parseInt(campoTelefono.getText());
+        ema = campoEmail.getText();
+        dire = campoDireccion.getText();
+        cod = Integer.parseInt(codigoPostal.getText());
+        loca = campoLocalidad.getText();
+        fecha = fechaEntrada.getDate();
+        numP = Integer.parseInt(numeroPersonas.getText());
+        cat = (String) Catering.getSelectedItem();
+
+        salones salon = new Salones(ERROR, dni, ema, PROPERTIES, cat, ERROR, dni);
+
+    }
+
 }
+}
+
