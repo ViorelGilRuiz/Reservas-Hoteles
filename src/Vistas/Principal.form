@@ -97,38 +97,36 @@
                               <Component id="botonReservaHabitaciones" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
                               <Component id="botonverResevasHabitaciones" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="100" max="32767" attributes="0"/>
+                          <EmptySpace pref="125" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="botonReservaSalones" min="-2" pref="163" max="-2" attributes="0"/>
-                              <Component id="botonverReservaSalones" min="-2" pref="163" max="-2" attributes="0"/>
+                              <Component id="botonReservaSalones" alignment="1" min="-2" pref="163" max="-2" attributes="0"/>
+                              <Component id="botonverReservaSalones" alignment="1" min="-2" pref="163" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="botonAltaEmpleados" min="-2" pref="138" max="-2" attributes="0"/>
                               <Component id="botonListadoEmpleados" min="-2" pref="138" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="botonReservaHabitaciones" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="botonReservaSalones" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="botonAltaEmpleados" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="botonReservaHabitaciones" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="botonReservaSalones" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="botonAltaEmpleados" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="botonverResevasHabitaciones" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                                  <Component id="botonverReservaSalones" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="botonListadoEmpleados" alignment="0" min="-2" pref="46" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botonverResevasHabitaciones" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="botonverReservaSalones" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="botonListadoEmpleados" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="21" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

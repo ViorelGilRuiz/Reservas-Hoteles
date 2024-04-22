@@ -3,11 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vistas;
+import Utilidades.Utilidades;
+
+import bbdd.Conexion;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -35,6 +43,7 @@ public class Login extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
 
+        contraseña.setName("Contraseña"); // NOI18N
         contraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contraseñaActionPerformed(evt);
@@ -51,6 +60,8 @@ public class Login extends javax.swing.JFrame {
                 botonaccederActionPerformed(evt);
             }
         });
+
+        usuario.setName("usuario"); // NOI18N
 
         jLabel3.setText("Contraseña");
 
@@ -128,9 +139,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel1)))
+                    .addComponent(jLabel1))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -158,13 +167,14 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_contraseñaActionPerformed
 
     private void botonaccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonaccederActionPerformed
-     Principal p = new Principal();
-     p.setVisible(true);
+        try {
+            acceso();
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_botonaccederActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -209,4 +219,22 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
+  
+    
+     public void acceso() throws SQLException {
+        String us = usuario.getText();
+        String pass = new String(contraseña.getPassword());
+
+        Conexion.conectar();
+        if (Conexion.acceder(us, pass)) {
+            Conexion.cerrarconexion();
+            Principal p = new Principal();
+            p.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Errpr de logado. Int?ntalo de nuevo.");
+            usuario.setText("");
+            contraseña.setText("");
+        }
+    }
+
 }

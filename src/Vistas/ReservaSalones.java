@@ -5,6 +5,7 @@
 package Vistas;
 
 import Utilidades.Utilidades;
+import bbdd.ConsultasEmpleados;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import modelo.Salones;
@@ -114,6 +115,11 @@ public class ReservaSalones extends java.awt.Dialog {
         comprobarDNI.setBackground(new java.awt.Color(255, 153, 0));
         comprobarDNI.setForeground(new java.awt.Color(255, 255, 255));
         comprobarDNI.setText("Comprobar DNI");
+        comprobarDNI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprobarDNIActionPerformed(evt);
+            }
+        });
         jPanel2.add(comprobarDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 120, -1));
 
         campoDNI.setName("DNI"); // NOI18N
@@ -244,9 +250,7 @@ public class ReservaSalones extends java.awt.Dialog {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(0, 0, 0))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(detalleFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -310,6 +314,10 @@ public class ReservaSalones extends java.awt.Dialog {
     private void botonNuevaReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaReservaActionPerformed
         registrar();
     }//GEN-LAST:event_botonNuevaReservaActionPerformed
+
+    private void comprobarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprobarDNIActionPerformed
+     Utilidades.validacionLetra(campoDNI.getText());
+    }//GEN-LAST:event_comprobarDNIActionPerformed
 
     /**
      * @param args the command line arguments

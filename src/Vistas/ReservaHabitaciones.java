@@ -7,6 +7,7 @@ package Vistas;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import Utilidades.Utilidades;
+import bbdd.ConsultasEmpleados;
 import modelo.Habitaciones;
 
 public class ReservaHabitaciones extends java.awt.Dialog {
@@ -85,25 +86,25 @@ public class ReservaHabitaciones extends java.awt.Dialog {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 40, -1));
 
         jLabel2.setText("Nombre");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 50, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 50, -1));
 
         jLabel3.setText("Apellidos");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         jLabel4.setText("Telefono");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         jLabel5.setText("Email");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 60, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 60, -1));
 
         jLabel6.setText("Direccion");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
         jLabel7.setText("CP");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 20, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 20, -1));
 
         jLabel8.setText("Localidad");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, 20));
 
         campoLocalidad.setName("Campo Localidad"); // NOI18N
         campoLocalidad.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +112,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                 campoLocalidadActionPerformed(evt);
             }
         });
-        jPanel2.add(campoLocalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 100, 30));
+        jPanel2.add(campoLocalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 100, 30));
 
         comprobarDNI.setBackground(new java.awt.Color(255, 153, 0));
         comprobarDNI.setForeground(new java.awt.Color(255, 255, 255));
@@ -169,7 +170,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                 campoDireccionActionPerformed(evt);
             }
         });
-        jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 100, 30));
+        jPanel2.add(campoDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 100, 30));
 
         codigoPostal.setName("Campo Código Postal"); // NOI18N
         codigoPostal.addActionListener(new java.awt.event.ActionListener() {
@@ -177,7 +178,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                 codigoPostalActionPerformed(evt);
             }
         });
-        jPanel2.add(codigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 100, 30));
+        jPanel2.add(codigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 100, 30));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de la reserva"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -260,10 +261,10 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                         .addComponent(detalleFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(botonGenerarFactura)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 92, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(botonNuevaReserva))
@@ -323,7 +324,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     }//GEN-LAST:event_botonNuevaReservaActionPerformed
 
     private void comprobarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprobarDNIActionPerformed
-        Utilidades.validacionLetraDni(dni);
+       Utilidades.validacionLetra(campoDNI.getText());
     }//GEN-LAST:event_comprobarDNIActionPerformed
 
     /**
@@ -412,7 +413,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
             ape = campoApellidos.getText();
             tel = Integer.parseInt(campoTelefono.getText());
             ema = campoEmail.getText();
-            cod = Integer.parseInt(codigoPostal.getText());
+            cod=  Integer.parseInt(codigoPostal.getText());
             loca = campoLocalidad.getText();
             dire = campoDireccion.getText();
             fechaE = fechaEntrada.getDate();
@@ -427,6 +428,6 @@ public class ReservaHabitaciones extends java.awt.Dialog {
             Habitaciones ha = new Habitaciones(ERROR, dni, ema, ema, tipoHabi, tel, HEIGHT, dni);
 
         }
-
+ 
     }
 }

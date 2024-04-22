@@ -90,6 +90,7 @@ public class ConsultasEmpleados extends Conexion {
         ResultSet rs = null;
 
         try {
+            Conexion.conectar();
 
             Statement st = conn.createStatement();
             rs = st.executeQuery(consultaComprueba);

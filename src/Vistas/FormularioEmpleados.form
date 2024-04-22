@@ -38,10 +38,10 @@
                   <Component id="jPanel2" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -127,38 +127,45 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="447" pref="447" max="-2" attributes="0"/>
-                      <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="jLabel12" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="447" pref="447" max="-2" attributes="0"/>
+                              <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel3" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="campoUsuario" max="32767" attributes="0"/>
+                                  <Component id="campoEmail" max="32767" attributes="0"/>
+                                  <Component id="campoApellidos" max="32767" attributes="0"/>
+                                  <Component id="campoNombre" max="32767" attributes="0"/>
+                                  <Component id="campoDNI" max="32767" attributes="0"/>
+                                  <Component id="campoTelefono" max="32767" attributes="0"/>
+                                  <Component id="fechaContrato" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="turno" alignment="0" pref="132" max="32767" attributes="0"/>
+                                  <Component id="campoContraseña" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="132" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                              <Component id="botonRegistrar" min="-2" pref="159" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="campoUsuario" pref="132" max="32767" attributes="0"/>
-                          <Component id="campoEmail" pref="132" max="32767" attributes="0"/>
-                          <Component id="campoApellidos" pref="132" max="32767" attributes="0"/>
-                          <Component id="campoNombre" pref="132" max="32767" attributes="0"/>
-                          <Component id="campoDNI" pref="132" max="32767" attributes="0"/>
-                          <Component id="campoTelefono" pref="132" max="32767" attributes="0"/>
-                          <Component id="fechaContrato" alignment="0" max="32767" attributes="0"/>
-                          <Component id="turno" alignment="0" max="32767" attributes="0"/>
-                          <Component id="campoContraseña" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-                      <Component id="botonRegistrar" min="-2" pref="159" max="-2" attributes="0"/>
+                      <EmptySpace pref="40" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -171,6 +178,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="campoDNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -218,7 +226,7 @@
                           </Group>
                           <Component id="fechaContrato" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -248,6 +256,9 @@
               <Properties>
                 <Property name="name" type="java.lang.String" value="Campo DNI" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDNIActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -347,6 +358,17 @@
               <Properties>
                 <Property name="name" type="java.lang.String" value="Campo Contrase&#xf1;a" noResource="true"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="99" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Comprobar DNI"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
