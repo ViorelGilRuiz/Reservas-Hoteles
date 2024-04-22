@@ -14,8 +14,8 @@ public class ConsultaClientes {
 
     public static Cliente recuperaDatosCliente(String dni) {
 
-        String consultaRecuperaTipo = "SELECT dni, nombre, apellidos, direccion, codPostal, localidad, telefono, email "
-                + "from cliente where dni='" + dni + "'";
+        String consultaRecuperaTipo = "SELECT dniCliente, nombre, apellidos,telefono,email, direccion, cp, localidad "
+                + "from clientes where dniCliente='" + dni + "'";
 
         Cliente c = null;
 

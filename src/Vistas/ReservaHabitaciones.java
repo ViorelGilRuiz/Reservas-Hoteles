@@ -7,7 +7,13 @@ package Vistas;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import Utilidades.Utilidades;
+import bbdd.Conexion;
 import bbdd.ConsultasEmpleados;
+import bbdd.ConsultaHabitaciones;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import modelo.Cliente;
 import modelo.Habitaciones;
 
 public class ReservaHabitaciones extends java.awt.Dialog {
@@ -320,16 +326,15 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     }//GEN-LAST:event_codigoPostalActionPerformed
 
     private void botonNuevaReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevaReservaActionPerformed
-        registrar();
+        Cliente c = null;
+        ConsultaHabitaciones.registrarCliente(c);
+      
     }//GEN-LAST:event_botonNuevaReservaActionPerformed
 
     private void comprobarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprobarDNIActionPerformed
-       Utilidades.validacionLetra(campoDNI.getText());
+     Utilidades.comprobarDni(dni);
     }//GEN-LAST:event_comprobarDNIActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -386,7 +391,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
     Date fechaE, FechaS;
     String tipoHabi;
 
-    public void registrar() {
+    public void registrar() throws SQLException {
 
         if (Utilidades.campoVacio(campoDNI)) {
             Utilidades.lanzaAlertaCampoVacio(campoDNI);
@@ -398,7 +403,7 @@ public class ReservaHabitaciones extends java.awt.Dialog {
             Utilidades.LazarAlertaCampoNumerico(this, campoTelefono);
         } else if (Utilidades.campoVacio(campoEmail)) {
             Utilidades.lanzaAlertaCampoVacio(campoEmail);
-        } else if (Utilidades.lanzaAlertaCampoVacio(codigoPostal)) {
+        } else if (Utilidades.campoVacio(codigoPostal)) {
             Utilidades.LazarAlertaCampoNumerico(this, codigoPostal);
         } else if (Utilidades.campoVacio(campoLocalidad)) {
             Utilidades.lanzaAlertaCampoVacio(campoLocalidad);
@@ -425,9 +430,23 @@ public class ReservaHabitaciones extends java.awt.Dialog {
                 tipoHabi = "No";
             }
 
-            Habitaciones ha = new Habitaciones(ERROR, dni, ema, ema, tipoHabi, tel, HEIGHT, dni);
+            Habitaciones h = new Habitaciones(ERROR, dni, ema, ema, tipoHabi, tel, HEIGHT, dni);
+            
+              Conexion.conectar();
 
+            if ((ConsultaHabitaciones.registrarHabitacion(h))) {
+                Conexion.cerrarconexion();
+                JOptionPane.showMessageDialog(this, "Registro realizado correctamente.");
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al realizar el registro, inténtalo mas tarde.");
+            }
+
+        }
+            
         }
  
     }
-}
+
+
+

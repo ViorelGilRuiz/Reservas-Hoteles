@@ -32,7 +32,7 @@ public class ConsultaHabitaciones {
     public static boolean comprobarDni(String campo) {
 
         try {
-            String consulta = "SELECT dni from cliente where dni=?";
+            String consulta = "SELECT dniCliente from clientes where dniCliente=?";
 
             PreparedStatement pst = conn.prepareStatement(consulta);
             ResultSet rs;
@@ -52,7 +52,7 @@ public class ConsultaHabitaciones {
     public static boolean registrarCliente(Cliente c) {
 
         try {
-            String consulta = "INSERT INTO cliente (dni, nombre, apellidos, telefono, email, direccion, codPostal, localidad)"
+            String consulta = "INSERT INTO clientes (dni, nombre, apellidos, telefono, email, direccion, codPostal, localidad)"
                     + "values (?, ?, ?, ?, ?, ?, ?, ?)";
 
             PreparedStatement pst = conn.prepareStatement(consulta);
@@ -78,8 +78,8 @@ public class ConsultaHabitaciones {
     public static void listaReservasHabi(DefaultTableModel modelo) {
         try {
             Object[] datos = new Object[7];
-            String consulta = "SELECT idReserva, dni, fechaEntrada, fechaSalida, tipoHabitacion, noches, precioTotal from "
-                    + "reserva_habitaciones where fechaEntrada>= CURRENT_DATE()";
+            String consulta = "SELECT idReserva, dniCliente, fechaentrada, Fechasalida, tipohabitacion, noches, preciototal from "
+                    + "reserva_habitacion where fechaentrada>= CURRENT_DATE()";
 
             ResultSet rs = conn.createStatement().executeQuery(consulta);
             while (rs.next()) {
@@ -101,8 +101,8 @@ public class ConsultaHabitaciones {
     public static void listaReservasHistorico(DefaultTableModel modelo) {
         try {
             Object[] datos = new Object[7];
-            String consulta = "SELECT idReserva, dni, fechaEntrada, fechaSalida, tipoHabitacion, noches, precioTotal from "
-                    + "reserva_habitaciones where fechaEntrada < CURRENT_DATE()";
+            String consulta = "SELECT idReserva, dniCliente, fechaentrada, Fechasalida, tipohabitacion, noches, preciototal from "
+                    + "reserva_habitacion where fechaentrada < CURRENT_DATE()";
 
             ResultSet rs = conn.createStatement().executeQuery(consulta);
             while (rs.next()) {
@@ -125,8 +125,8 @@ public class ConsultaHabitaciones {
         try {
             Object[] datos = new Object[7];
 
-            String consulta = "SELECT idReserva, dni, fechaEntrada, fechaSalida, tipoHabitacion, noches, precioTotal from "
-                    + "reserva_habitaciones where fechaEntrada='" + fecha + "'";
+            String consulta = "SELECT idReserva, dni, fechaentrada, Fechasalida, tipohabitacion, noches, preciototal from "
+                    + "reserva_habitaciones where fechaentrada='" + fecha + "'";
 
             ResultSet rs = conn.createStatement().executeQuery(consulta);
 
@@ -149,8 +149,8 @@ public class ConsultaHabitaciones {
     public static boolean registrarHabitacion(Habitaciones h) {
 
         try {
-            String consulta = "INSERT INTO reserva_habitaciones (dni, fechaEntrada, fechaSalida, "
-                    + "tipoHabitacion, noches, precioTotal, dniEmpleado)"
+            String consulta = "INSERT INTO reserva_habitacion (dni, fechaentrada, Fechasalida, "
+                    + "tipohabitacion, noches, preciototal, dniEmpleado)"
                     + "values (?, ?, ?, ?, ?, ?, ?)";
 
             PreparedStatement pst = conn.prepareStatement(consulta);

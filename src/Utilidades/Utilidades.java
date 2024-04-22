@@ -5,7 +5,14 @@
 package Utilidades;
 
 import Vistas.ReservaHabitaciones;
+import bbdd.Conexion;
+import static bbdd.Conexion.conn;
 import java.awt.Component;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -95,4 +102,23 @@ public class Utilidades {
     public static void limpiarcampos() {
 
 }
+    public static boolean comprobarDni(String campo) {
+
+        try {
+            String consulta = "SELECT dni from cliente where dni=?";
+
+            PreparedStatement pst = conn.prepareStatement(consulta);
+            ResultSet rs;
+
+            pst.setString(1, campo);
+
+            rs = pst.executeQuery();
+
+            return rs.next();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }

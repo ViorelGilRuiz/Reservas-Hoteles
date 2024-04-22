@@ -22,7 +22,7 @@ public class ConsultaSalones {
     public static boolean registrarSalones(Salones s) {
 
         try {
-            String consulta = "INSERT INTO reserva_salones (dni, fecha, numPersonas, "
+            String consulta = "INSERT INTO reserva_salon (dniCliente, fecha , numPersonas, "
                     + "catering, precioTotal, dniEmpleado)"
                     + "values (?, ?, ?, ?, ?, ?)";
 
@@ -48,8 +48,8 @@ public class ConsultaSalones {
     public static void listaReservasSalones(DefaultTableModel modelo) {
         try {
             Object[] datos = new Object[7];
-            String consulta = "SELECT idReserva, dni, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
-                    + "reserva_salones where fecha>= CURRENT_DATE()";
+            String consulta = "SELECT idReserva, dniCliente, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
+                    + "reserva_salon where fecha>= CURRENT_DATE()";
 
             ResultSet rs = conn.createStatement().executeQuery(consulta);
             while (rs.next()) {
@@ -72,8 +72,8 @@ public class ConsultaSalones {
         try {
             Object[] datos = new Object[7];
 
-            String consulta = "SELECT idReserva, dni, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
-                    + "reserva_habitaciones where fecha='" + fecha + "'";
+            String consulta = "SELECT idReserva, dniCliente, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
+                    + "reserva_habitacion where fecha='" + fecha + "'";
 
             ResultSet rs = conn.createStatement().executeQuery(consulta);
 
@@ -96,8 +96,8 @@ public class ConsultaSalones {
     public static void listaReservasHistorico(DefaultTableModel modelo) {
         try {
             Object[] datos = new Object[7];
-            String consulta = "SELECT idReserva, dni, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
-                    + "reserva_salones where fecha < CURRENT_DATE()";
+            String consulta = "SELECT idReserva, dniCliente, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
+                    + "reserva_salon where fecha < CURRENT_DATE()";
 
             ResultSet rs = conn.createStatement().executeQuery(consulta);
             while (rs.next()) {
@@ -119,8 +119,8 @@ public class ConsultaSalones {
     public static void listaReservasSalon(DefaultTableModel modelo) {
         try {
             Object[] datos = new Object[7];
-            String consulta = "SELECT idReserva, dni, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
-                    + "reserva_salones where fecha>= CURRENT_DATE()";
+            String consulta = "SELECT idReserva, dniCliente, fecha, numPersonas, catering, precioTotal, dniEmpleado from "
+                    + "reserva_salon where fecha>= CURRENT_DATE()";
 
             ResultSet rs = conn.createStatement().executeQuery(consulta);
             while (rs.next()) {

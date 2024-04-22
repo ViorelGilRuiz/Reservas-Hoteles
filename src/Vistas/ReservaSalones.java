@@ -5,8 +5,14 @@
 package Vistas;
 
 import Utilidades.Utilidades;
+import bbdd.Conexion;
+import bbdd.ConsultaHabitaciones;
 import bbdd.ConsultasEmpleados;
+import bbdd.ConsultaSalones;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import modelo.Salones;
 
@@ -319,9 +325,6 @@ public class ReservaSalones extends java.awt.Dialog {
      Utilidades.validacionLetra(campoDNI.getText());
     }//GEN-LAST:event_comprobarDNIActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -400,22 +403,40 @@ public class ReservaSalones extends java.awt.Dialog {
         Utilidades.alertaComboNoSeleccionado(this, Catering);
          } else {
             
-        dni = campoDNI.getText();
-        nom = campoNombre.getText();
-        ape = campoApellidos.getText();
-        tele = Integer.parseInt(campoTelefono.getText());
-        ema = campoEmail.getText();
-        dire = campoDireccion.getText();
-        cod = Integer.parseInt(codigoPostal.getText());
-        loc = campoLocalidad.getText();
-        fecha = fechaEntrada.getDate();
-        numP = Integer.parseInt(numeroPersonas.getText());
-        cat = (String) Catering.getSelectedItem();
+            try {
+                dni = campoDNI.getText();
+                nom = campoNombre.getText();
+                ape = campoApellidos.getText();
+                tele = Integer.parseInt(campoTelefono.getText());
+                ema = campoEmail.getText();
+                dire = campoDireccion.getText();
+                cod = Integer.parseInt(codigoPostal.getText());
+                loc = campoLocalidad.getText();
+                fecha = fechaEntrada.getDate();
+                numP = Integer.parseInt(numeroPersonas.getText());
+                cat = (String) Catering.getSelectedItem();
+                
+                Salones salon = new Salones (ERROR, dni, ema, PROPERTIES, cat, ERROR, dni);
+                
+                Conexion.conectar();
+                
+                if (ConsultaSalones.registrarSalones(salon)) {
+                    Conexion.cerrarconexion();
+                    JOptionPane.showMessageDialog(this, "Registro realizado correctamente.");
+                    
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error al realizar el registro, inténtalo mas tarde.");
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(ReservaSalones.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
-        Salones sa = new Salones (ERROR, dni, ema, PROPERTIES, cat, ERROR, dni);
+        }
+            
+        }
 
     }
 
-}
-}
+
+
 

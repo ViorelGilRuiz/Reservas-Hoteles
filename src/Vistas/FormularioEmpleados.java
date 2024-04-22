@@ -293,7 +293,7 @@ public class FormularioEmpleados extends java.awt.Dialog {
     }//GEN-LAST:event_campoDNIActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Utilidades.validacionLetra(campoDNI.getText());
+        Utilidades.comprobarDni(dni);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

@@ -231,7 +231,7 @@ public class Login extends javax.swing.JFrame {
             Principal p = new Principal();
             p.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(this, "Errpr de logado. Int?ntalo de nuevo.");
+            JOptionPane.showMessageDialog(this, "Error de logado. Intentalo de nuevo.");
             usuario.setText("");
             contraseña.setText("");
         }
